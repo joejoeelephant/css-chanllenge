@@ -1,0 +1,41 @@
+@font-face {
+    font-family: "Figtree";
+    src: url('./assets/fonts/Figtree-VariableFont_wght.ttf') format('truetype'),  
+    url('./assets/fonts/Figtree-Italic-VariableFont_wght.ttf') format('truetype');
+}
+
+:root {
+    --text-primary: #0f0f0f;
+    --text-secondary: #9a9a9a;
+    --link-active: #edcc59;
+    --background-color: #f5d04e;
+    --shadow-color: #000000;
+  }
+
+body {
+    font-family: 'Figtree', sans-serif; /* Fallback to sans-serif if custom font is unavailable */
+    background-color: var(--background-color);
+    color: var(--text-primary);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    height: 100vh;
+}
+
+.card {
+    max-width: 430px;
+    box-shadow: 8px 10px 0px 0px var(--shadow-color);
+}
+
+.card-h3:hover {
+    color: var(--link-active)
+}
+
+.card-tag {
+    background-color: var(--background-color);
+}
+
+.card-desc {
+    color:var(--text-secondary)
+}
