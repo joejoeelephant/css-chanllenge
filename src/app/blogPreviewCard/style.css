@@ -12,7 +12,7 @@
     --shadow-color: #000000;
   }
 
-body {
+.card-container  {
     font-family: 'Figtree', sans-serif; /* Fallback to sans-serif if custom font is unavailable */
     background-color: var(--background-color);
     color: var(--text-primary);
@@ -21,11 +21,16 @@ body {
     align-items: center;
     padding: 2rem;
     height: 100vh;
+    font-size: clamp(12px, 2vw, 18px);
 }
 
 .card {
     max-width: 430px;
     box-shadow: 8px 10px 0px 0px var(--shadow-color);
+}
+
+.card-text-lg {
+    font-size: 1.2rem;
 }
 
 .card-h3:hover {
