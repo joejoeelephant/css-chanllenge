@@ -20,7 +20,8 @@
     grid-template-rows: repeat(6, 1fr);
 }
 
-@media (min-width: 769px) {
+
+@media (min-width: 1400px) {
     .page-container {
         grid-template-columns: 30% 40% 30%;
 
@@ -34,7 +35,7 @@
     }
 }
 
-@media (min-width: 1400px) {
+@media (min-width: 769px) {
     .page-container {
         grid-template-columns: 30% 40% 30%;
 
