@@ -20,22 +20,21 @@
     grid-template-rows: repeat(6, 1fr);
 }
 
-
-@media (min-width: 1400px) {
+@media (min-width: 769px) {
     .page-container {
-        grid-template-columns: 30% 40% 30%;
+        grid-template-columns: 25% 50% 25%;
 
     }
 }
 
-@media (min-width: 819px) {
+@media (min-width: 820px) {
     .page-container {
         grid-template-columns: 20% 60% 20%;
 
     }
 }
 
-@media (min-width: 769px) {
+@media (min-width: 1400px) {
     .page-container {
         grid-template-columns: 30% 40% 30%;
 
