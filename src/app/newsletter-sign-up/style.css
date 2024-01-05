@@ -1,0 +1,22 @@
+@font-face {
+    font-family: "Roboto";
+    src:url('./fonts/Roboto-Regular.ttf') format('truetype'),  
+     url('./fonts/Roboto-Bold.ttf') format('truetype');
+}
+:root {
+    --bg-color1:#242b45;
+    --text-color1: #242b45;
+}
+
+.bg-color1 {
+    background-color: var(--bg-color1);
+}
+
+.page-container {
+    font-family: 'Roboto', sans-serif;
+    color: var(--text-color1)
+}
+
+.card-container {
+    max-width: 960px;
+}

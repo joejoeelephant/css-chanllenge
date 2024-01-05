@@ -1,0 +1,13 @@
+@font-face {
+    font-family: "Roboto";
+    src:url('/newsletter-signup/assets/fonts/Roboto-Regular.ttf') format('truetype'),  
+     url('/newsletter-signup/assets/fonts/Roboto-Bold.ttf') format('truetype');
+}
+
+.page-container {
+    font-family: 'Roboto', sans-serif;
+}
+
+.gradient-button:hover,.gradient-button:active{
+    background: linear-gradient(to right, #ff5478, #ff693e);
+}

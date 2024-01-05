@@ -9,6 +9,9 @@ export default function Home() {
       <Link href={'/faq-accordion-main'} className='text-white text-xl font-bold underline'>
         faq-accordion-main
       </Link>
+      <Link href={'/newsletter-sign-up'} className='text-white text-xl font-bold underline'>
+        newsletter-sign-up
+      </Link>
     </main>
   )
 }
