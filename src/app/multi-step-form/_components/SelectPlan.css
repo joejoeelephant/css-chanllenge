@@ -1,0 +1,27 @@
+.radio-input:checked+.radio-item{
+    border: 1px solid var(--border-color2);
+}
+
+.plan-switch-btn{
+    width: 2rem;
+    height: 1rem;
+    background-color: var(--text-color3);
+    border-radius: 2rem; 
+    position: relative;
+}
+
+.plan-switch-btn::before{
+    content: '';
+    width: 0.6rem;
+    height: 0.6rem;
+    border-radius: 50%;
+    background-color: #fff;
+    position: absolute;
+    top: 0.2rem;
+    left: 0.1rem;
+    transition: left 0.3s;
+}
+
+.plan-switch input[type='checkbox']:checked+.plan-switch-btn::before {
+    left: 1.2rem;
+}

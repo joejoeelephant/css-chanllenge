@@ -12,6 +12,9 @@ export default function Home() {
       <Link href={'/newsletter-sign-up'} className='text-white text-xl font-bold underline'>
         newsletter-sign-up
       </Link>
+      <Link href={'/multi-step-form'} className='text-white text-xl font-bold underline'>
+        multi-step-form
+      </Link>
     </main>
   )
 }

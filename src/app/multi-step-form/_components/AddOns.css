@@ -1,0 +1,12 @@
+.checkbox-list label+label{
+    display: block;
+    margin-top: 1rem;
+}
+
+.checkbox-input:checked+.checkbox-item{
+    border: 1px solid var(--border-color2);
+}
+.checkbox-input:checked+.checkbox-item .checkbox-icon{
+    background-color: var(--bg-color3);
+    border-color: var(--border-color2);
+}
