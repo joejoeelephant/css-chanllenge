@@ -1,0 +1,46 @@
+@font-face {
+    font-family: "Rubik";
+    src: url('/interactive-comments/fonts/Rubik-VariableFont_wght.ttf') format('truetype'),  
+    url('/interactive-comments/fonts/Rubik-Italic-VariableFont_wght.ttf') format('truetype');
+}
+
+:root {
+    /* Primary */
+    --moderate-blue: hsl(238, 40%, 52%);
+    --soft-red: hsl(358, 79%, 66%);
+    --light-grayish: blue;
+    --pale-red: hsl(357, 100%, 86%);
+    /* Neutral */
+    --dark-blue: hsl(212, 24%, 26%);
+    --grayish-Blue: hsl(211, 10%, 45%);
+    --light-gray: hsl(223, 19%, 93%);
+    --very-light-gray: hsl(228, 33%, 97%);
+    --white: #fff
+}
+
+.unresizable-textarea {
+    resize: none;
+}
+
+.bg-moderate-blue {
+    background-color: var(--moderate-blue);
+}
+
+.text-primary {
+    color: var(--dark-blue);
+}
+
+.text-secondary {
+    color: var(--grayish-Blue);
+}
+
+.text-accent {
+    color: var(--moderate-blue);
+}
+
+.page-container {
+    font-family: 'Rubik', sans-serif;
+    min-height: 100dvh;
+    background-color: var(--very-light-gray);
+    color: var(--dark-blue);
+}

@@ -15,6 +15,9 @@ export default function Home() {
       <Link href={'/multi-step-form'} className='text-white text-xl font-bold underline'>
         multi-step-form
       </Link>
+      <Link href={'/interactive-comments'} className='text-white text-xl font-bold underline'>
+        interactive-comments
+      </Link>
     </main>
   )
 }

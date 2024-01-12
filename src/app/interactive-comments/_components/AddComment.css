@@ -1,0 +1,32 @@
+.comment-add-container {
+    display: grid;
+    grid-template-rows: 1fr auto;
+    grid-template-columns: auto 1fr auto;
+    grid-template-areas: 
+    'inputBox inputBox inputBox'
+    'avatar       .    button'
+    ;
+}
+
+@media (min-width: 768px) {
+    .comment-add-container {
+        gap: 1rem;
+        grid-template-areas: 
+        'avatar inputBox button'
+        '.      inputBox  .'
+        ;
+    }
+}
+
+.comment-add-avatar {
+    grid-area: avatar;
+}
+
+.comment-add-inputBox {
+    grid-area: inputBox;
+    margin-bottom: .5rem;
+}
+
+.comment-add-button {
+    grid-area: button;
+}

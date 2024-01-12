@@ -1,0 +1,34 @@
+.comment-container {
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    grid-template-columns: auto 1fr auto;
+    grid-template-areas: 
+    'title title title'
+    'content content content'
+    'number . reply';
+}
+
+@media (min-width: 768px) {
+    .comment-container{
+        grid-template-areas: 
+        'number title reply'
+        'number content content'
+        'number content content';
+    }
+}
+
+.comment-title {
+    grid-area: title;
+}
+
+.comment-content {
+    grid-area: content;
+}
+
+.comment-number {
+    grid-area: number;
+}
+
+.comment-reply {
+    grid-area: reply;
+}
