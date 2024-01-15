@@ -1,0 +1,10 @@
+.unchecked.cart-button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: -0.1rem;
+    width: 0.5rem;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    background-color: var(--orange);
+}

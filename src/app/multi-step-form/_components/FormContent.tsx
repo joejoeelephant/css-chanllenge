@@ -1,6 +1,8 @@
 'use client'
 import React from 'react'
 import { useFormData } from '../_context/FormDataContext';
+import { validateName, validateEmail, validatePhone } from '../_utils/FormValidate.'
+
 interface FormContentProps {
     title: string;
     description: string;
@@ -12,7 +14,10 @@ export default function FormContent({title, description, children} : FormContent
     const {step} = formData;
 
     function checkStep1() {
-        return !errorData.name && !errorData.email && !errorData.phone
+       const errorMsg1 = validateName(formData.name)
+       const errorMsg2 = validateEmail(formData.email)
+       const errorMsg3 = validatePhone(formData.phone)
+       return !errorMsg1 && !errorMsg2 && ! errorMsg3
     }
 
     const nextStep = () => {

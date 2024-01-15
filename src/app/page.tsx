@@ -18,6 +18,9 @@ export default function Home() {
       <Link href={'/interactive-comments'} className='text-white text-xl font-bold underline'>
         interactive-comments
       </Link>
+      <Link href={'/ecommerce-product-page'} className='text-white text-xl font-bold underline'>
+        ecommerce-product-page
+      </Link>
     </main>
   )
 }
