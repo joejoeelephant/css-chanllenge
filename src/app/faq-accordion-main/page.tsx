@@ -62,7 +62,7 @@ export default function Page() {
                         {
                             list.map((item , i) => {
                                 return (
-                                    <li key={i+String(new Date())} className='py-2 2xl:py-4 border-b-2 border-b-slate-200'>
+                                    <li key={i} className='py-2 2xl:py-4 border-b-2 border-b-slate-200'>
                                         <div className='flex justify-between gap-8 items-center'>
                                             <div className='font-bold flex-1 lg:text-xl'>
                                                 {item.title}
@@ -88,8 +88,10 @@ export default function Page() {
                                                 }
                                             </div>
                                         </div>
-                                        <div className={`text-secondary text-xs lg:text-base mt-4 overflow-hidden ${ i === openIndex ? 'h-fit' : 'h-0'}`}>
-                                            {item.desc}
+                                        <div className={`text-secondary text-xs lg:text-base mt-4 transition-all duration-500 grid  ${ i === openIndex ? 'grid-rows-[1fr]' : 'grid-rows-[0fr]'}`}>
+                                            <div className='overflow-hidden'>
+                                                {item.desc}
+                                            </div>
                                         </div>
                                     </li>
                                 )

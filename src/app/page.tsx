@@ -21,6 +21,9 @@ export default function Home() {
       <Link href={'/ecommerce-product-page'} className='text-white text-xl font-bold underline'>
         ecommerce-product-page
       </Link>
+      <Link href={'/todo-app-main'} className='text-white text-xl font-bold underline'>
+        todo-app-main
+      </Link>
     </main>
   )
 }

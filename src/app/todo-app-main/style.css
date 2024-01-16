@@ -1,0 +1,135 @@
+@font-face {
+    font-family: 'JosefinSans';
+    src: url('/todo-app-main/font/JosefinSans-VariableFont_wght.ttf') format('truetype'),
+        url('/todo-app-main/font/JosefinSans-Italic-VariableFont_wght.ttf') format('truetype');
+}
+
+body {
+    font-size: clamp(12px, 4vw, 18px);
+}
+
+:root {
+    /* Primary */
+    --Bright-Blue: hsl(220, 98%, 61%);
+    /* Light Theme */
+    --Very-Light-Gray: hsl(0, 0%, 98%);
+    --Very-Light-Grayish-Blue: hsl(236, 33%, 92%);
+    --Light-Grayish-Blue: hsl(233, 11%, 84%);
+    --Dark-Grayish-Blue: hsl(236, 9%, 61%);
+    --Very-Dark-Grayish-Blue: hsl(235, 19%, 35%);
+
+    /* Dark Theme */
+    --Very-Dark-Blue: hsl(235, 21%, 11%);
+    --Very-Dark-Desaturated-Blue: hsl(235, 24%, 19%);
+    --Light-Grayish-Blue-hover: hsl(236, 33%, 92%);
+}
+
+.light-theme {
+    --container-bg-color: var(--Very-Light-Gray);
+    --text-primary: var(--Very-Dark-Grayish-Blue);
+    --text-secondary: var(--Dark-Grayish-Blue);
+    --text-active: var(--Bright-Blue);
+    --content-bg: white;
+    --hero-mobile-image: url('/todo-app-main/images/bg-mobile-light.jpg');
+    --hero-deskTop-image: url('/todo-app-main/images/bg-desktop-light.jpg');
+    --border-circle-color: var(--Light-Grayish-Blue);
+    --border-color: var(--Very-Light-Grayish-Blue);
+}
+
+.dark-theme {
+    --container-bg-color: var(--Very-Dark-Blue);
+    --text-primary: var(--Light-Grayish-Blue);
+    --text-secondary: var(--Dark-Grayish-Blue);
+    --text-active: var(--Bright-Blue);
+    --content-bg: var(--Very-Dark-Desaturated-Blue);
+    --hero-mobile-image: url('/todo-app-main/images/bg-mobile-dark.jpg');
+    --hero-deskTop-image: url('/todo-app-main/images/bg-desktop-dark.jpg');
+    --border-circle-color: hsl(237, 14%, 26%);
+    --border-color: hsl(233, 14%, 35%);
+
+}
+
+.bg-content {
+    background-color: var(--content-bg);
+}
+
+.border-circle-color {
+    border-color: var(--border-circle-color);
+}
+
+.border-color {
+    border-color: var(--border-color);
+}
+
+.text-primary {
+    color: var(--text-primary);
+}
+
+.text-secondary {
+    color: var(--text-secondary)
+}
+
+
+.text-accent {
+    color: var(--Bright-Blue);
+}
+
+.page-container {
+    font-family: 'JosefinSans', sans-serif;
+    min-height: 100svh;
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    grid-template-rows: 1fr 2.5fr;
+    background-color: var(--container-bg-color);
+
+}
+
+@media (min-width: 768px) {
+    .page-container {
+        grid-template-rows: 1fr 1.5fr;
+    }
+}
+
+.page-hero {
+    grid-column: 1 / 4;
+    grid-row: 1 / 2;
+    background-image: var(--hero-mobile-image);
+    background-size: cover;
+}
+
+@media (min-width:768px) {
+    .page-hero {
+        background-image: var(--hero-deskTop-image);
+    }
+}
+
+
+.page-main {
+    grid-column: 1 / 4;
+    grid-row: 1 / 3;
+}
+
+.todo-checked {
+    background: linear-gradient(to bottom right, hsl(192, 100%, 67%) , hsl(280, 87%, 65%));
+}
+
+/* Style the scrollbar track (the part the thumb moves within) */
+.todo-list-container::-webkit-scrollbar-track {
+    background-color: var(--container-bg-color);
+}
+
+/* Style the scrollbar thumb (the draggable element) */
+.todo-list-container::-webkit-scrollbar-thumb {
+    background-color: var(--border-color);
+    border-radius: 10px;
+}
+
+/* Hover styles for the scrollbar thumb */
+.todo-list-container::-webkit-scrollbar-thumb:hover {
+    background-color: #555;
+}
+
+/* Style the width of the scrollbar */
+.todo-list-container::-webkit-scrollbar {
+    width: 8px; /* Adjust the width of the scrollbar here */
+}
