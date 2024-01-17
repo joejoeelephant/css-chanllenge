@@ -18,14 +18,18 @@ const toDoReducer = (state: ToDoItem[], action: ToDoAction): ToDoItem[] => {
     case 'CLEAR_COMPLETED':
       return state.filter(item => item.status !== 'completed');
     case 'DRAG_REORDER': {
-      const dragItem = state.find(item => item.id === action.payload.dragId)
-      const temp = state.filter(item => item.id !== action.payload.dragId)
-      const dropIndex = temp.findIndex(item => item.id === action.payload.dropId)
-      if (dropIndex !== -1 && dragItem) {
-        // Insert the new item before the target item
-        temp.splice(dropIndex, 0, dragItem);
+      const dragIndex = state.findIndex(item => item.id === action.payload.dragId);
+      const dropIndex = state.findIndex(item => item.id === action.payload.dropId);
+    
+      if (dragIndex < 0 || dropIndex < 0) {
+        return state; // Return the original state if either id is not found
       }
-      return temp
+    
+      const result = Array.from(state); // Create a new array to avoid mutating the original state
+      const [removed] = result.splice(dragIndex, 1); // Remove the dragged item from its original position
+      result.splice(dropIndex, 0, removed); // Insert the dragged item at the new position
+    
+      return result;
     }
     default:
       return state;
@@ -40,53 +44,14 @@ type ToDoContextType = {
 const ToDoContext = createContext<ToDoContextType | undefined>(undefined);
 
 export const ToDoProvider: React.FC<{children: React.ReactNode}> = ({ children }) => {
-    const demoData: ToDoItem[] = [
-        {
-            id: Math.ceil(Math.random() * 100),
-            content: 'Lorem, ipsum dolor1.',
-            status: 'active'
-        },
-        {
-            id: Math.ceil(Math.random() * 100),
-            content: 'Lorem, ipsum dolor2.',
-            status: 'completed'
-        },
-        {
-            id: Math.ceil(Math.random() * 100) ,
-            content: 'Lorem, ipsum dolor3.',
-            status: 'active'
-        },
-        {
-            id: Math.ceil(Math.random() * 100),
-            content: 'Lorem, ipsum dolor4.',
-            status: 'active'
-        },
-        {
-            id: Math.ceil(Math.random() * 100),
-            content: 'Lorem, ipsum dolor5.',
-            status: 'completed'
-        },
-        {
-            id: Math.ceil(Math.random() * 100) ,
-            content: 'Lorem, ipsum dolor6.',
-            status: 'active'
-        },
-        {
-            id: Math.ceil(Math.random() * 100),
-            content: 'Lorem, ipsum dolor7.',
-            status: 'active'
-        },
-        {
-            id: Math.ceil(Math.random() * 100),
-            content: 'Lorem, ipsum dolor11.',
-            status: 'completed'
-        },
-        {
-            id: Math.ceil(Math.random() * 100) ,
-            content: 'Lorem, ipsum dolor12313123.',
-            status: 'active'
-        }
-    ]
+    let id = 1;
+    const demoData: ToDoItem[] = Array.from({length: 8}).map((item, index) => {
+      return {
+        id: index,
+        content: "Lorem ipsum dolor sit amet." + index,
+        status: 'active'
+      }
+    })
     const [toDoItems, dispatch] = useReducer(toDoReducer, demoData);
 
     return (

@@ -126,7 +126,7 @@ body {
 
 /* Hover styles for the scrollbar thumb */
 .todo-list-container::-webkit-scrollbar-thumb:hover {
-    background-color: #555;
+    background-color: var(--border-circle-color);
 }
 
 /* Style the width of the scrollbar */

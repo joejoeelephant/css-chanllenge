@@ -68,7 +68,7 @@ export default function Nav() {
         setCartChecked(true)
     }
     return (
-        <div className='sticky w-full z-30 top-0 left-0 bg-white'>
+        <div className='sticky w-full z-30 top-0 left-0 bg-white' >
             <div className='flex justify-between items-center max-w-7xl mx-auto px-6 py-6 md:pb-10 border-b relative'>
                 <div className='flex justify-between items-center gap-4'>
                     <div className='w-5 self-center mt-1 select-none md:hidden' onClickCapture={showNavList}>
