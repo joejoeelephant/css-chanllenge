@@ -1,7 +1,7 @@
 @font-face {
     font-family: "WorkSans";
-    src: url('./fonts/WorkSans-VariableFont_wght.ttf') format('truetype'),  
-    url('./fonts/WorkSans-Italic-VariableFont_wght.ttf') format('truetype');
+    src: url('/faq-accordion-main/assets/fonts/WorkSans-VariableFont_wght.ttf') format('truetype'),  
+    url('/faq-accordion-main/assets/fonts/WorkSans-Italic-VariableFont_wght.ttf') format('truetype');
 }
 
 :root {

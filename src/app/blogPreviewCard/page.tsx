@@ -7,7 +7,7 @@ export default function page() {
     <div className='card-container'>
       <div className="card w-full rounded-3xl overflow-hidden p-5 bg-white border-2 border-gray-800">
         <div className="rounded-xl overflow-hidden">
-          <Image src={'/assets/images/illustration-article.svg'} width={336} height={201} alt='illustration' className='w-full' priority></Image>
+          <Image src={'/blogPreviewCard/assets/images/illustration-article.svg'} width={336} height={201} alt='illustration' className='w-full' priority></Image>
         </div>
         <div className='card-tag inline-block mt-4 font-bold rounded-md py-1 px-3'>
           Learning
@@ -23,7 +23,7 @@ export default function page() {
         </p>
         <div className='flex items-center gap-4 mt-6'>
           <div className='rounded-full'>
-            <Image src={'/assets/images/image-avatar.webp'} alt='avatar' width={64} height={65} className='w-full'></Image>
+            <Image src={'/blogPreviewCard/assets/images/image-avatar.webp'} alt='avatar' width={64} height={65} className='w-full'></Image>
           </div>
           <div className='font-extrabold'>
             Greg Hooper

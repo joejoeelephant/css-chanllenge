@@ -1,7 +1,7 @@
 @font-face {
     font-family: "Roboto";
-    src:url('./fonts/Roboto-Regular.ttf') format('truetype'),  
-     url('./fonts/Roboto-Bold.ttf') format('truetype');
+    src:url('/newsletter-signup/assets/fonts/Roboto-Regular.ttf') format('truetype'),  
+     url('/newsletter-signup/assets/fonts/Roboto-Bold.ttf') format('truetype');
 }
 :root {
     --bg-color1:#242b45;
