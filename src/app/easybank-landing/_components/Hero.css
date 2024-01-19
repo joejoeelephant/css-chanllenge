@@ -1,0 +1,39 @@
+.hero-container {
+    display: grid;
+    grid-template-columns: 1fr calc(var(--container-max-width) / 2) calc(var(--container-max-width) / 2) 1fr;
+    grid-template-rows: 1fr 1.2fr;
+    grid-template-areas: 
+        'heroImage heroImage heroImage heroImage'
+        'herText    herText    herText   herText'
+    ;
+}
+
+ @media (min-width:768px) {
+    .hero-container {
+        grid-template-areas: 
+        '. herText heroImage heroImage'
+        '. herText heroImage heroImage'
+    ;
+    }
+ }
+
+.hero-image {
+    grid-area: heroImage;
+    background: url('/easybank-landing/images/bg-intro-mobile.svg');
+    background-size: cover;
+    background-position: center 20%;
+    background-repeat: no-repeat;
+}
+
+@media (min-width:768px) {
+    .hero-image {
+        background: url('/easybank-landing/images/bg-intro-desktop.svg');
+        background-repeat: no-repeat;
+        background-position: -4rem, -14rem ;
+        background-size: 1271px 1034px;
+    }
+}
+
+.hero-text {
+    grid-area: herText;
+}

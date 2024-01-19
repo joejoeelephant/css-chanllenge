@@ -22,6 +22,9 @@ export default function Home() {
       <a href={'/todo-app-main'} className='text-white text-xl font-bold underline'>
         todo-app-main
       </a>
+      <a href={'/easybank-landing'} className='text-white text-xl font-bold underline'>
+        easybank-landing
+      </a>
     </main>
   )
 }
