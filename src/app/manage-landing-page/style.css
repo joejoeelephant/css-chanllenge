@@ -1,0 +1,67 @@
+:root {
+    /* ### Primary */
+
+    --Bright-Red: hsl(12, 88%, 59%);
+    --Dark-Blue: hsl(228, 39%, 23%);
+
+    /* ### Neutral */
+
+    --Dark-Grayish-Blue: hsl(227, 12%, 61%);
+    --Very-Dark-Blue: hsl(233, 12%, 13%);
+    --Very-Pale-Red: hsl(13, 100%, 96%);
+    --Vary-Light-Gray: hsl(0, 0%, 98%);
+
+}
+
+.btn-primary {
+    background-color: var(--Bright-Red);
+    color: white;
+}
+
+.bg-vary-light-gray {
+    background-color: var(--Vary-Light-Gray);
+}
+
+.btn-primary-shadow {
+    box-shadow: 0 0.5rem 2rem -0.5rem var(--Bright-Red);
+}
+
+.bg-bright-red {
+    background-color: var(--Bright-Red);
+}
+
+.bg-very-pale-red {
+    background-color: var(--Very-Pale-Red);
+
+}
+
+.text-primary {
+    color: var(--Dark-Blue);
+}
+
+.text-secondary {
+    color: var(--Dark-Grayish-Blue);
+}
+
+.text-accent {
+    color: var(--Bright-Red);
+}
+
+.page-container {
+    min-height: 100vh;
+    min-height: 100svh;
+    background-image: url('/manage-landing-page/images/bg-simplify-section-mobile-1.svg'), url('/manage-landing-page/images/bg-simplify-section-mobile-1.svg');
+    background-size: 100%, 90%;
+    background-repeat: no-repeat, no-repeat;
+    background-position: 0 0, 50vw 90svh;
+    font-family: var(--font-family), sans-serif;
+}
+
+@media (min-width: 768px) {
+    .page-container {
+        background-image: url('/manage-landing-page/images/bg-simplify-section-mobile-1.svg'), url('/manage-landing-page/images/bg-simplify-section-desktop-2.svg');
+        background-size: 50%, 140%;
+        background-repeat: no-repeat, no-repeat;
+        background-position: 50vw 0vw, -25vw 50%;
+    }
+}

@@ -1,0 +1,7 @@
+.nav-mask {
+    background: linear-gradient(to bottom, transparent 5%, rgba(0,0,0,0.3));
+}
+
+.nav-item:hover {
+    color: var(--Dark-Grayish-Blue);
+}

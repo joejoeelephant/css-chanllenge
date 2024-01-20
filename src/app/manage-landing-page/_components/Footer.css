@@ -1,0 +1,65 @@
+.footer-container {
+    background-color: var(--Very-Dark-Blue);
+}
+
+.footer-grid-box {
+    display: grid;
+    grid-template-rows: repeat(5, auto);
+    grid-template-columns: auto 1fr auto;
+    grid-template-areas: 
+        'email          email       email'
+        'navList        navList     navList'
+        'shareButtons shareButtons shareButtons'
+        'logo           logo           logo'
+        'copyRights    copyRights  copyRights';
+}
+
+@media (min-width: 768px) {
+    .footer-grid-box {
+        grid-template-areas: 
+            'logo         navList email'
+            '.            navList email'
+            '.            navList .'
+            '.            navList .'
+            'shareButtons navList copyRights';
+    }
+}
+
+.footer-email {
+    grid-area: email;
+}
+
+.footer-navList {
+    grid-area: navList;
+}
+
+.footer-shareButtons {
+    grid-area: shareButtons;
+}
+
+.footer-logo {
+    grid-area: logo;
+}
+
+.footer-copyRights {
+    grid-area: copyRights;
+}
+
+.footer-nav-list-item:hover {
+    color: var(--Bright-Red);
+}
+
+.footer-share-button:hover img {
+    fill: var(--Bright-Red)
+}
+
+.footer-share-icon {
+    -webkit-mask-image: var(--mask-image-url);
+    mask-image: var(--mask-image-url);
+    mask-repeat: no-repeat;
+    background-color: #fff;
+}
+
+.footer-share-icon:hover {
+    background-color: var(--Bright-Red);
+}

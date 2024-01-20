@@ -25,6 +25,9 @@ export default function Home() {
       <a href={'/easybank-landing'} className='text-white text-xl font-bold underline'>
         easybank-landing
       </a>
+      <a href={'/manage-landing-page'} className='text-white text-xl font-bold underline'>
+        manage-landing-page
+      </a>
     </main>
   )
 }
