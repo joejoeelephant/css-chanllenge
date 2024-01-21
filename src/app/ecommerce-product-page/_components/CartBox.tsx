@@ -47,7 +47,7 @@ export default function CartBox({isVisible}: CartBoxProps) {
                                                         </span>
                                                     </div>
                                                 </div>
-                                                <div className='w-4' onClickCapture={() => {deleteItem(item.id)}}>
+                                                <div className='w-4 cursor-pointer' onClickCapture={() => {deleteItem(item.id)}}>
                                                     <Image src={'/ecommerce-product-page/images/icon-delete.svg'} alt='delete' width={14} height={16} className='w-full'></Image>
                                                 </div>
                                             </div>
@@ -55,7 +55,7 @@ export default function CartBox({isVisible}: CartBoxProps) {
                                     })
                                 }
                             </div>
-                            <div className='py-4 bg-primary text-white text-center mt-4 rounded-lg active:opacity-65'>
+                            <div className='py-4 bg-primary text-white text-center mt-4 rounded-lg active:opacity-65 cursor-pointer'>
                                 Checkout
                             </div>
                         </div>

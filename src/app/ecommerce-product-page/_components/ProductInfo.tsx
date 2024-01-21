@@ -99,17 +99,17 @@ export default function ProductInfo() {
         </div>
         <div className="product-actionButtons flex flex-col items-center md:items-start md:flex-row gap-4 p-6 md:py-0">
             <div className='bg-light-grayish-blue flex items-center p-5 rounded-md w-full md:w-4/12'>
-              <div className='w-3 aspect-square' onClickCapture={minusCount}>
+              <div className='w-3 aspect-square cursor-pointer' onClickCapture={minusCount}>
                 <Image src={'/ecommerce-product-page/images/icon-minus.svg'} alt='minus' width={12} height={12} className='w-full h-auto'></Image>
               </div>
               <div className='flex-1 text-center'>
                 {count}
               </div>
-              <div className='w-3 aspect-square' onClickCapture={plusCount}>
+              <div className='w-3 aspect-square cursor-pointer' onClickCapture={plusCount}>
                 <Image src={'/ecommerce-product-page/images/icon-plus.svg'} alt='minus' width={12} height={12} className='w-full h-auto'></Image>
               </div>
             </div>
-            <div className='bg-orange p-4 mt-2 md:mt-0 flex justify-center items-center text-white font-semibold rounded-md gap-2 w-full md:w-8/12 select-none cursor-pointer' onClick={addCart}>
+            <div className='bg-orange p-4 mt-2 md:mt-0 flex justify-center items-center text-white font-semibold rounded-md gap-2 w-full md:w-8/12 select-none cursor-pointer active:opacity-65' onClick={addCart}>
               <span className='inline-block w-5'>
                 <Image src={'/ecommerce-product-page/images/icon-cart.svg'} alt='cart' width={22} height={20} className='w-full' style={{filter: 'brightness(200%)'}}></Image>
               </span>

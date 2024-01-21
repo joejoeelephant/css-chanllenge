@@ -38,7 +38,7 @@ export default function Lightbox({isVisible, productImages, closeLightBox}: Ligh
     }
     return (
         <div className={`fixed top-0 left-0 z-50 w-full min-h-screen ${isVisible ? 'flex' : 'hidden'} justify-center items-center bg-[rgba(0,0,0,0.8)] select-none`}>
-            <div className='w-5/12 '>
+            <div className='w-5/12 max-w-[36rem]'>
                 <div className='flex justify-end'>
                     <div className='w-6 cursor-pointer' onClickCapture={closeLightBox}>
                         <Image src={'/ecommerce-product-page/images/icon-close.svg'} alt='close' width={14} height={15} className='w-full'></Image>
